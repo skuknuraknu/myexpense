@@ -1,6 +1,6 @@
 # MyExpense API
 
-Kotlin- and Spring Boot–based REST API for managing personal expenses, categories, and user accounts. The service provides CRUD-style endpoints to track spending, organize transactions by category, and manage user roles. Data is persisted in PostgreSQL, with schema versioning and migrations handled through Flyway.
+Kotlin and Spring Boot based REST API for managing personal expenses, categories, and user accounts. The service provides CRUD-style endpoints to track spending, organize transactions by category, and manage user roles. Data is persisted in PostgreSQL, with schema versioning and migrations handled through Flyway.
 
 ## Tech Stack
 - Kotlin 1.9
