@@ -1,8 +1,12 @@
+package com.skuknuraknu.myexpense.entity
+
 import jakarta.persistence.*
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.NotNull
 import java.time.LocalDateTime
 import java.time.Instant;
+import jakarta.persistence.FetchType
+
 
 @Entity
 @Table(name = "tb_users")
@@ -22,5 +26,12 @@ class User {
 
     @Column(name = "updated_at")
     var updatedAt: Instant? = Instant.now()
-    
+
+    @OneToMany(
+        mappedBy = "user",
+        fetch = FetchType.LAZY,
+        cascade = [CascadeType.ALL],
+        orphanRemoval = true
+    )
+    var userRoles: MutableSet<UserRole> = mutableSetOf()
 }
